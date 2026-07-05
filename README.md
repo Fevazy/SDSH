@@ -2,11 +2,11 @@
 API is unstable, algorithms substitute each other, performance may vary etc., etc.
 Do **NOT** use in your projects if you're not ready for massive refactoring.
 
-## DAS
+## SDSH
 
-Das ist DAS. Das DAS ist das Deterministisch Aktion Scheduler, DAS.
+SDSH stands for Sharded Deterministic State Handler.
 
-(This is DAS. The DAS is the Deterministic Action Scheduler, DAS.)
+### What's this?
 
 General concept is to make pools for objects, every tick scan them, write
 actions to perform on them and at phase two apply these actions. All that may
@@ -38,10 +38,11 @@ Why/how [abcde]? Because of...
         deterministic backend
     - How: ask Kovarex, www.factorio.com
 
+### Usage
+
 This thing may be used for:
 - Physics/game engines,
 - simulations with many objects and complex logic,
 - and everything you'll want it to work for. Just understand how it works
     and use as you wish, that's what "open source" means
-
 

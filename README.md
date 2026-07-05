@@ -2,7 +2,7 @@
 API is unstable, algorithms substitute each other, performance may vary etc., etc.
 Do **NOT** use in your projects if you're not ready for massive refactoring.
 
-##DAS
+## DAS
 
 Das ist DAS. Das DAS ist das Deterministisch Aktion Scheduler, DAS.
 

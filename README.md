@@ -17,7 +17,7 @@ be slow and random, so this thing is gonna do it...
 - d) sequentially within a tick (you define order of updates)
 - e) deterministically* &lt;= this asterisk is VERY important
 
-Why/how [abcde]? Because of...
+Why/how &lt;abcde&gt;? 
 - a,b) 
     - Why: linearly faster, most production-grade engines don't use much cores
         while hardware they run on can provide this opportunity.
@@ -37,6 +37,13 @@ Why/how [abcde]? Because of...
     - Why: "works on my machine", huh? So, instead of Docker and VMs just use
         deterministic backend
     - How: ask Kovarex, www.factorio.com
+
+### About asterisk
+
+Driver calls user provided callbacks, so if they rely on external I/O driver
+can't provide determinism at all. Also, use programmatically-defined formulas
+to aproximate float/double trigonometry since hardware-defined variants
+can cary betwwe architectures, implementations etc. etc.
 
 ### Usage
 

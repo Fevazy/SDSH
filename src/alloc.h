@@ -5,8 +5,8 @@
 
 
 #include <stdint.h>
-void *SDSH_alloc(uint64_t size);
-void SDSH_free(void* p);
+void *sdsh_alloc(uint64_t size);
+void sdsh_free(void* p);
 
 
 

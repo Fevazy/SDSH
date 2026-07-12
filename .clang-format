@@ -1,6 +1,6 @@
 BasedOnStyle: LLVM
 
-AlignConsecutiveDeclarations: AcrossEmptyLinesAndComments
+AlignConsecutiveDeclarations: AcrossComments
 AllowShortFunctionsOnASingleLine: None
 BreakBeforeBraces: Attach
 ColumnLimit: 100

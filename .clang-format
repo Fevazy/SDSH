@@ -1,8 +1,10 @@
 BasedOnStyle: LLVM
-IndentWidth: 4
-UseTab: Never
-BreakBeforeBraces: Attach
+
+AlignConsecutiveDeclarations: AcrossEmptyLinesAndComments
 AllowShortFunctionsOnASingleLine: None
-SpaceAfterControlStatementKeyword: true
-PointerAlignment: Right
+BreakBeforeBraces: Attach
 ColumnLimit: 100
+IndentWidth: 4
+PointerAlignment: Right
+SpaceAfterControlStatementKeyword: true
+UseTab: Never

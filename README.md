@@ -40,10 +40,10 @@ Why/how &lt;abcde&gt;?
 
 ### About asterisk
 
-Driver calls user provided callbacks, so if they rely on external I/O driver
+Driver calls user provided callbacks, so if they rely on external I/O, driver
 can't provide determinism at all. Also, use programmatically-defined formulas
 to aproximate float/double trigonometry since hardware-defined variants
-can cary betwwe architectures, implementations etc. etc.
+can cary between architectures, implementations etc. etc.
 
 ### Usage
 

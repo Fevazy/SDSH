@@ -57,7 +57,7 @@ void sdsh_type_registry_t_init(sdsh_type_registry_t *arrp) {
     };
 }
 
-uint64_t sdsh_register_type(sdsh_state_t *state, uint64_t size) {
+sdsh_type_id_t sdsh_register_type(sdsh_state_t *state, uint64_t size) {
     if (!state || !state->typereg || !size)
         return 0;
     sdsh_type_registry_t *typereg = state->typereg;

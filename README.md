@@ -21,9 +21,11 @@ Why/how &lt;abcde&gt;?
 - a,b) 
     - Why: linearly faster, most production-grade engines don't use much cores
         while hardware they run on can provide this opportunity.
-    - How: !(W&&R), or simpler - W^R. This driver will use two-phase
-        tick update: first we select objects to act on using only reads,
-        then switch to second phase and perform actions.
+    - How: !(W&&R), or simpler - W^R. This driver will use two-phase tick
+        update for cross-entity systems: first they read data and populate
+        command buffer, then switch to second phase and perform actions from
+        buffer. If system touches only one entity, then it performs on entity
+        in-place without touching command buffer.
 - c)
     - Why: cross-language support (PL without C interop is probably dead PL),
         and because core is written in C.
@@ -53,3 +55,11 @@ This thing may be used for:
 - and everything you'll want it to work for. Just understand how it works
     and use as you wish, that's what "open source" means
 
+### News
+
+We're moving to ECS-like layout, but determinism is still preferred. Command
+buffers will be implemented as intended, but most per-entity data mutations now
+will write in-place in one phase. So, now different systems can run in one
+phase if they don't write or read other entities' data, or in two phases, if
+they do so. This gives more flexibility, cache friendliness and lets you pass
+same data once instead of twice.

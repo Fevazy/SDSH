@@ -19,26 +19,26 @@ be slow and random, so this thing is gonna do it...
 
 Why/how &lt;abcde&gt;? 
 - a,b) 
-    - Why: linearly faster, most production-grade engines don't use much cores
-        while hardware they run on can provide this opportunity.
-    - How: !(W&&R), or simpler - W^R. This driver will use two-phase tick
-        update for cross-entity systems: first they read data and populate
-        command buffer, then switch to second phase and perform actions from
-        buffer. If system touches only one entity, then it performs on entity
-        in-place without touching command buffer.
+  - Why: linearly faster, most production-grade engines don't use much cores
+    while hardware they run on can provide this opportunity.
+  - How: !(W&&R), or simpler - W^R. This driver will use two-phase tick
+    update for cross-entity systems: first they read data and populate
+    command buffer, then switch to second phase and perform actions from
+    buffer. If system touches only one entity, then it performs on entity
+    in-place without touching command buffer.
 - c)
-    - Why: cross-language support (PL without C interop is probably dead PL),
-        and because core is written in C.
-    - How: entire library is written in C, so it has native C API
+  - Why: cross-language support (PL without C interop is probably dead PL),
+    and because core is written in C.
+  - How: entire library is written in C, so it has native C API
 - d)
-    - Why: critical in terms of determinism. Deterministic engine must
-        always perform A either before or after B, but this behaviour mustn't
-        change between startups and even more so between tick updates
-    - How: priorities.
+  - Why: critical in terms of determinism. Deterministic engine must
+    always perform A either before or after B, but this behaviour mustn't
+    change between startups and even more so between tick updates
+  - How: priorities.
 - e)
-    - Why: "works on my machine", huh? So, instead of Docker and VMs just use
-        deterministic backend
-    - How: ask Kovarex, www.factorio.com
+  - Why: "works on my machine", huh? So, instead of Docker and VMs just use
+    deterministic backend
+  - How: ask Kovarex, www.factorio.com
 
 ### About asterisk
 
@@ -53,7 +53,7 @@ This thing may be used for:
 - Physics/game engines,
 - simulations with many objects and complex logic,
 - and everything you'll want it to work for. Just understand how it works
-    and use as you wish, that's what "open source" means
+  and use as you wish, that's what "open source" means
 
 ### News
 

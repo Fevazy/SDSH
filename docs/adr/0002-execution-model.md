@@ -1,4 +1,4 @@
-# ADR-0001
+# ADR-0002
 ---
 date: 2026-10-07
 status: accepted, pending

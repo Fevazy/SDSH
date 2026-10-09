@@ -1,4 +1,4 @@
-# ADR-XXXX
+# ADR-XXXX. ADR name
 
 **Date:** yyyy-mm-dd
 

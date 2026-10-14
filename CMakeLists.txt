@@ -4,14 +4,18 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+
+
 set(SDSH_SOURCES
     src/alloc.c
 )
 
-set(SDSH_PUBLIC_HEADERS include/SDSH.h)
+set(SDSH_PUBLIC_HEADERS include/sdsh.h)
+
+
 
 add_library(SDSH STATIC ${SDSH_SOURCES} )
 target_include_directories(SDSH
-    INTERFACE include
+    INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
 )

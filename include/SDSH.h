@@ -4,13 +4,6 @@
 
 #include <stdint.h>
 
-typedef uint64_t sdsh_type_id_t;
-typedef struct sdsh_state_t sdsh_state_t;
-
-// Returns new type id.
-// 0 is an error.
-sdsh_type_id_t sdsh_register_type(sdsh_state_t *state, uint64_t size);
-
-
+typedef struct sdsh_world_t sdsh_world_t;
 
 #endif // SDSH_PUB_SDSH_H

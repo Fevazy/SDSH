@@ -6,12 +6,15 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
 
+option(SDSH_BUILD_TESTS "Build tests" ON)
+
 set(SDSH_SOURCES
     src/alloc.c
 )
 
-set(SDSH_PUBLIC_HEADERS include/sdsh.h)
-
+set(SDSH_PUBLIC_HEADERS
+    include/SDSH.h
+)
 
 
 add_library(sdsh STATIC ${SDSH_SOURCES} )
@@ -19,3 +22,8 @@ target_include_directories(sdsh
     INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
+if(SDSH_BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(test)
+endif()

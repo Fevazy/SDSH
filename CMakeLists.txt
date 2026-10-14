@@ -19,8 +19,10 @@ set(SDSH_PUBLIC_HEADERS
 
 add_library(sdsh STATIC ${SDSH_SOURCES} )
 target_include_directories(sdsh
-    INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include
-    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+    PUBLIC 
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 if(SDSH_BUILD_TESTS)

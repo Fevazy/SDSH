@@ -14,8 +14,8 @@ set(SDSH_PUBLIC_HEADERS include/sdsh.h)
 
 
 
-add_library(SDSH STATIC ${SDSH_SOURCES} )
-target_include_directories(SDSH
+add_library(sdsh STATIC ${SDSH_SOURCES} )
+target_include_directories(sdsh
     INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
 )

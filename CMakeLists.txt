@@ -10,6 +10,8 @@ option(SDSH_BUILD_TESTS "Build tests" ON)
 
 set(SDSH_SOURCES
     src/alloc.c
+    src/archetype.c
+    src/world.c
 )
 
 set(SDSH_PUBLIC_HEADERS

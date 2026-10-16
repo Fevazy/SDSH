@@ -13,7 +13,7 @@ set(SDSH_SOURCES
 )
 
 set(SDSH_PUBLIC_HEADERS
-    include/SDSH.h
+    include/sdsh.h
 )
 
 

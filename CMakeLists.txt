@@ -22,7 +22,7 @@ target_include_directories(sdsh
     PUBLIC 
         ${CMAKE_CURRENT_SOURCE_DIR}/include
     PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
 if(SDSH_BUILD_TESTS)

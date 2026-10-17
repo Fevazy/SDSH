@@ -13,6 +13,7 @@ set(SDSH_SOURCES
     src/archetype.c
     src/component.c
     src/entity.c
+    src/range.c
     src/world.c
 )
 

@@ -52,6 +52,8 @@ void *sdsh_component_get_base(sdsh_range_t *r, sdsh_component_id_t c);
 void *sdsh_comp_get(sdsh_world_t *w, sdsh_entity_id_t e,
         sdsh_component_id_t c);
 
+
+
 uint64_t sdsh_range_get_count(sdsh_range_t *r);
 
 

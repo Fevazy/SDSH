@@ -11,6 +11,7 @@ option(SDSH_BUILD_TESTS "Build tests" ON)
 set(SDSH_SOURCES
     src/alloc.c
     src/archetype.c
+    src/entity.c
     src/world.c
 )
 

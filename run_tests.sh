@@ -1,3 +1,3 @@
 #!/bin/bash
 cd build &&
-    ctest -j$(nproc)
+    ctest -j$(nproc) $@

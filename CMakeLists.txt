@@ -14,6 +14,7 @@ set(SDSH_SOURCES
     src/component.c
     src/entity.c
     src/range.c
+    src/system.c
     src/world.c
 )
 

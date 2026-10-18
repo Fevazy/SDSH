@@ -26,12 +26,15 @@ Why/how &lt;abcde&gt;?
 - b)
   - Why: Faster, a lot. For example, on most Zen 4 (AMD microarchitecture)
     implementations read from non-cached DRAM has latency about 300-400 CPU
-    cycles, while read from L3 (layer-3, biggest) cache costs 50* cycles, L2
-    cache hit has latency of 14* cycles and L1D (Layer-1-Data) hit worths 4-5*
+    cycles, while read from L3 (layer-3, biggest) cache costs 50\* cycles, L2
+    cache hit has latency of 14\* cycles and L1D (Layer-1-Data) hit worths 4-5\*
     cycles. Assuming 5.0 GHz clock, that's 60-80, 10, 2.8 and 0.95 nanoseconds
     of latency.
-    *all cycle counts may vary between CPU models, motherboards and
+
+    \*all cycle counts may vary between CPU models, motherboards and
     implementations, but scale is always pretty same.
+
+  - How: Architecture and memory layout.
 - c)
   - Why: cross-language support (PL without C interop is probably dead PL),
     and because core is written in C.

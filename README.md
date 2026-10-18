@@ -19,11 +19,15 @@ be slow and random, so this thing is gonna do it...
 
 Why/how &lt;abcde&gt;? 
 - a) 
+
   - Why: linearly faster, most production-grade engines don't use much cores
     while hardware they run on could provide this opportunity.
+
   - How: multithreaded architecture with lock-free structures where it's
     possible. 
+
 - b)
+
   - Why: Faster, a lot. For example, on most Zen 4 (AMD microarchitecture)
     implementations read from non-cached DRAM has latency about 300-400 CPU
     cycles, while read from L3 (layer-3, biggest) cache costs 50\* cycles, L2
@@ -35,18 +39,27 @@ Why/how &lt;abcde&gt;?
     implementations, but scale is always pretty same.
 
   - How: Architecture and memory layout.
+
 - c)
+
   - Why: cross-language support (PL without C interop is probably dead PL),
     and because core is written in C.
+
   - How: entire library is written in C, so it has native C API.
+
 - d)
+
   - Why: critical in terms of determinism. Deterministic engine must
     always perform A either before or after B, but this behaviour mustn't
     change between startups and even more so between tick updates.
+
   - How: user-defined call graph that describes which systems sees what.
+
 - e)
+
   - Why: "works on my machine", huh? So, instead of Docker and VMs just use
     deterministic backend.
+
   - How: ask Kovarex and team, www.factorio.com.
 
 ### About asterisk

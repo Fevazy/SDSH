@@ -1,3 +1,3 @@
 #!/bin/bash
-cd build &&
+cd cmake_build &&
     ctest -j$(nproc) $@

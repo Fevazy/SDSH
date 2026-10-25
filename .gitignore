@@ -1,2 +1,2 @@
-build/
+cmake_build/
 compile_commands.json

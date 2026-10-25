@@ -1,6 +1,6 @@
+#include "alloc.h"
 #include <stdint.h>
 #include <stdlib.h>
-#include "alloc.h"
 
 void *sdsh_alloc(uint64_t size) {
     if (size == 0)

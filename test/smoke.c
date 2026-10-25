@@ -31,13 +31,14 @@ int main() {
 
     sdsh_archetype_id_t a = sdsh_archetype_register(w, comps, 2);
 
-    sdsh_component_set_t reads = {.count = 2, .indexes = {0, 1}}; // pos, vel
-    sdsh_component_set_t writes = {.count = 1, .indexes = {0}};   // pos
-    sdsh_system_register(w, system_callback, &reads, &writes, NULL);
+    sdsh_component_id_t reads[] = {0, 1}; // pos, vel
+    sdsh_component_id_t writes[] = {0};   // pos
+    sdsh_system_register(w, system_callback, reads, 2, writes, 1, NULL);
 
     sdsh_entity_id_t e = sdsh_entity_spawn(w, a);
     *(position_t *)sdsh_comp_get(w, e, 0) = (position_t){.x = 0, .y = 0}; // pos
-    *(velocity_t *)sdsh_comp_get(w, e, 1) = (velocity_t){.x = 1, .y = 15}; // vel
+    *(velocity_t *)sdsh_comp_get(w, e, 1) =
+        (velocity_t){.x = 1, .y = 15}; // vel
 
     sdsh_world_deploy(w);
     sdsh_world_tick(w);

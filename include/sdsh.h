@@ -5,8 +5,6 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#define SDSH_MAX_COMPONENTS 256 // per archetype
-
 typedef uint8_t  sdsh_component_id_t; // must store up to N =
 // = SDSH_MAX_COMPONENTS-1. keep as short as possible, wastes memory a lot
 typedef uint64_t sdsh_archetype_id_t; // must store. keep.
@@ -14,17 +12,11 @@ typedef uint64_t sdsh_entity_id_t;
 
 typedef struct sdsh_world_t          sdsh_world_t;
 typedef struct sdsh_component_desc_t sdsh_component_desc_t;
-typedef struct sdsh_component_set_t  sdsh_component_set_t;
 typedef struct sdsh_range_t          sdsh_range_t;
 
 struct sdsh_component_desc_t {
     uint64_t size;
     uint8_t  align;
-};
-
-struct sdsh_component_set_t {
-    uint64_t            count;
-    sdsh_component_id_t indexes[SDSH_MAX_COMPONENTS];
 };
 
 sdsh_world_t *sdsh_world_create();
@@ -45,7 +37,9 @@ uint64_t sdsh_range_get_count(sdsh_range_t *r);
 
 void sdsh_system_register(sdsh_world_t *w,
                           void (*cb)(sdsh_range_t *r, void *user),
-                          sdsh_component_set_t *reads,
-                          sdsh_component_set_t *writes, void *user);
+                          sdsh_component_id_t *reads,
+                          sdsh_component_id_t  readcount,
+                          sdsh_component_id_t *writes,
+                          sdsh_component_id_t writecount, void *user);
 
 #endif // SDSH_PUB_SDSH_H

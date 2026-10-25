@@ -4,7 +4,9 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-
+if(CMAKE_C_COMPILER_ID MATCHES "Clang|GNU")
+    add_compile_options(-fdiagnostics-color=always)
+endif()
 
 option(SDSH_BUILD_TESTS "Build tests" ON)
 

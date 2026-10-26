@@ -33,7 +33,7 @@ sdsh_entity_id_t sdsh_entity_spawn(sdsh_world_t *r, sdsh_archetype_id_t a);
 void *sdsh_component_get_base(sdsh_range_t *r, sdsh_component_id_t c);
 void *sdsh_comp_get(sdsh_world_t *w, sdsh_entity_id_t e, sdsh_component_id_t c);
 
-uint64_t sdsh_range_get_count(sdsh_range_t *r);
+sdsh_entity_id_t sdsh_range_get_count(sdsh_range_t *r);
 
 void sdsh_system_register(sdsh_world_t *w,
                           void (*cb)(sdsh_range_t *r, void *user),

@@ -11,10 +11,10 @@ typedef struct {
 
 void system_callback(sdsh_range_t *r, void *user) {
     (void)user;
-    position_t *p = (position_t *)sdsh_component_get_base(r, 0); // pos
-    velocity_t *v = (velocity_t *)sdsh_component_get_base(r, 1); // vel
-    uint64_t    count = sdsh_range_get_count(r);
-    for (uint32_t i = 0; i < count; i++) {
+    position_t      *p = (position_t *)sdsh_component_get_base(r, 0); // pos
+    velocity_t      *v = (velocity_t *)sdsh_component_get_base(r, 1); // vel
+    sdsh_entity_id_t count = sdsh_range_get_count(r);
+    for (sdsh_entity_id_t i = 0; i < count; i++) {
         p[i].x += v[i].x;
         p[i].y += v[i].y;
     }

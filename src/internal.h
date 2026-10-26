@@ -19,9 +19,9 @@ typedef struct sdsh_archetype_t sdsh_archetype_t;
 typedef struct sdsh_component_t sdsh_component_t;
 
 struct sdsh_world_t {
-    sdsh_archetype_t **archetypes;
-    uint64_t           archetype_count;
-    uint64_t           archetype_capacity;
+    sdsh_archetype_t  **archetypes;
+    sdsh_archetype_id_t archetype_count;
+    sdsh_archetype_id_t archetype_capacity;
 };
 
 struct sdsh_component_t {
@@ -30,8 +30,8 @@ struct sdsh_component_t {
 };
 
 struct sdsh_archetype_t {
-    uint64_t         component_count;
-    sdsh_component_t components[];
+    sdsh_component_id_t component_count;
+    sdsh_component_t    components[];
 };
 
 struct sdsh_range_t {};

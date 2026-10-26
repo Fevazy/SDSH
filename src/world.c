@@ -2,7 +2,9 @@
 
 sdsh_world_t *sdsh_world_create() {
     sdsh_world_t *w = sdsh_alloc(sizeof(sdsh_world_t));
-    // TODO: initialize world
+    if (!w)
+        abort(); // TODO: substitute with careful handler
+    *w = (sdsh_world_t){};
     return w;
 };
 

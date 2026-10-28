@@ -25,8 +25,9 @@ struct sdsh_world_t {
 };
 
 struct sdsh_component_t {
-    uint64_t size;
-    uint64_t align;
+    sdsh_component_id_t id;
+    uint64_t            size;
+    uint64_t            align;
 };
 
 struct sdsh_archetype_t {

@@ -15,8 +15,9 @@ typedef struct sdsh_component_desc_t sdsh_component_desc_t;
 typedef struct sdsh_range_t          sdsh_range_t;
 
 struct sdsh_component_desc_t {
-    uint64_t size;
-    uint64_t align;
+    sdsh_component_id_t id;
+    uint64_t            size;
+    uint64_t            align;
 };
 
 sdsh_world_t *sdsh_world_create();

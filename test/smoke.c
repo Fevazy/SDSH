@@ -25,8 +25,8 @@ int main() {
     sdsh_world_t *w = sdsh_world_create();
 
     sdsh_component_desc_t comps[2] = {
-        {.size = sizeof(position_t), .align = _Alignof(position_t)}, // idx=0
-        {.size = sizeof(velocity_t), .align = _Alignof(velocity_t)}, // idx=1
+        {.id = 0, .size = sizeof(position_t), .align = _Alignof(position_t)},
+        {.id = 1, .size = sizeof(velocity_t), .align = _Alignof(velocity_t)},
     };
 
     sdsh_archetype_id_t a = sdsh_archetype_register(w, comps, 2);

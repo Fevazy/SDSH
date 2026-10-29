@@ -2,6 +2,7 @@
 #ifndef SDSH_PUB_SDSH_H
 #define SDSH_PUB_SDSH_H
 
+#include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
 
@@ -31,6 +32,8 @@ sdsh_archetype_id_t sdsh_archetype_register(sdsh_world_t          *w,
 
 sdsh_entity_id_t sdsh_entity_spawn(sdsh_world_t *r, sdsh_archetype_id_t a);
 
+bool  sdsh_register_components(sdsh_world_t *w, sdsh_component_desc_t *comps,
+                               uint64_t count);
 void *sdsh_component_get_base(sdsh_range_t *r, sdsh_component_id_t c);
 void *sdsh_comp_get(sdsh_world_t *w, sdsh_entity_id_t e, sdsh_component_id_t c);
 

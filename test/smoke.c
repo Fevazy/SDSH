@@ -29,6 +29,7 @@ int main() {
         {.id = 1, .size = sizeof(velocity_t), .align = _Alignof(velocity_t)},
     };
 
+    sdsh_register_components(w, comps, 2);
     sdsh_archetype_id_t a = sdsh_archetype_register(w, comps, 2);
 
     sdsh_component_id_t reads[] = {0, 1}; // pos, vel

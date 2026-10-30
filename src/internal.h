@@ -2,9 +2,8 @@
 #ifndef SDSH_INTERNAL_H
 #define SDSH_INTERNAL_H
 
-#include "alloc.h" // IWYU pragma: export
-#include "sdsh.h"  // IWYU pragma: export
-#include <stdint.h>
+#include "alloc.h"  // IWYU pragma: export
+#include "sdsh.h"   // IWYU pragma: export
 #include <stdio.h>  // IWYU pragma: export
 #include <stdlib.h> // IWYU pragma: export
 

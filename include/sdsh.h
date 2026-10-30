@@ -6,9 +6,8 @@
 #include <stddef.h>
 #include <stdint.h>
 
-typedef uint8_t  sdsh_component_id_t; // must store up to N =
-// = SDSH_MAX_COMPONENTS-1. keep as short as possible, wastes memory a lot
-typedef uint64_t sdsh_archetype_id_t; // must store. keep.
+typedef uint8_t  sdsh_component_id_t;
+typedef uint64_t sdsh_archetype_id_t;
 typedef uint64_t sdsh_entity_id_t;
 
 typedef struct sdsh_world_t          sdsh_world_t;
